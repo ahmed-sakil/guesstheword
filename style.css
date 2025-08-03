@@ -88,10 +88,18 @@ body{
     font-size: 2rem;
     color: aliceblue;
 }
+.announcement{
+    align-self: center;
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: all .2s;
+}
 .submit{
     align-self: center;
     padding: 11px 27px;
-    margin: 4rem 0 0 0;
+    margin: 0em 0 0 0;
     border: none;
     border-radius: 5px;
     background-color: #00b591;
@@ -134,5 +142,11 @@ body{
     font-size: 1.3rem;
     width: 12%;
     background-color: red;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    color: aliceblue;
 
 }
