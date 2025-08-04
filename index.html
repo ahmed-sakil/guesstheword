@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Guess The Word</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io/favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Classic | Guess The Word</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/classic_style.css">
 </head>
+
 <body>
     <div class="app">
         <header class="header">
             <div class="flex">
+                <div id="return"><i class="ri-arrow-left-s-line"></i></div>
                 <div id="question"><i class="ri-question-fill"></i></div>
-                <div id="analysis"><i class="ri-line-chart-fill"></i></i></div>
             </div>
             <div id="mode">CLASSIC</div>
             <div id="settings"><i class="ri-settings-2-fill"></i></i></div>
@@ -62,7 +66,6 @@
                 <div class="placeholder value65"></div>
             </div>
             <div class="announcement">Try Your Word...</div>
-            <button class="submit">SUBMIT</button>
         </section>
         <section class="keyboard">
             <div class="row row1">
@@ -99,7 +102,10 @@
                 <button class="backspace"><i class="ri-delete-back-2-fill"></i></button>
             </div>
         </section>
+        <button class="submit">SUBMIT</button>
+
     </div>
-    <script src="script.js"></script>
+    <script src="./js/classic_script.js"></script>
 </body>
+
 </html>
