@@ -1,5 +1,17 @@
 
 async function mainApp() {
+
+    function getBGColor() {
+        const bgColors = ["#ebd0c9", "#ca926d", "#e9f0aa", "#ecc8d6", "#cdb8df", "#eddaaf", "#b0a9d5", "#dee0ec", "#92adca", "#c1ddaa", "#e7d293", "#f5e8e3", "#d4a580", "#f0f5b5", "#f0d5e0", "#d9c5e8", "#f1e5c0", "#c4bfe0", "#e8e9f0", "#a7bfd3"];
+        let randomIndex = Math.floor(Math.random() * bgColors.length);
+        return bgColors[randomIndex];
+    }
+
+    const app = document.querySelector(".app");
+    let bgColor = getBGColor();
+    app.style.backgroundColor = bgColor;
+
+
     const wordsList = ['SPACE', 'SPADE', 'SAKIL', 'TROLY', 'NEVER', 'BOOBS'];
     // const wordsList = ['SAKIL'];
     const buttons = document.querySelectorAll('.btn');
@@ -45,7 +57,7 @@ async function mainApp() {
             let className = 'value' + rowNumber + i;
             let element = document.querySelector(`.${className}`);
             if (element) {
-                element.style.backgroundColor = 'rgb(52, 106, 52)';
+                element.style.backgroundColor = '#acd17a';
             } else {
                 console.error('Element with class', className, 'not found');
             }
@@ -66,7 +78,7 @@ async function mainApp() {
                 let className = 'value' + rowNumber + parseInt(i + 1);
                 let element = document.querySelector(`.${className}`);
                 if (element) {
-                    element.style.backgroundColor = '#133A18';
+                    element.style.backgroundColor = '#acd17a';
                 } else {
                     console.error('Element with class', className, 'not found');
                 }
@@ -75,7 +87,7 @@ async function mainApp() {
                 let className = 'value' + rowNumber + parseInt(i + 1);
                 let element = document.querySelector(`.${className}`);
                 if (element) {
-                    element.style.backgroundColor = '#FFDD36';
+                    element.style.backgroundColor = '#f5cd47';
                 } else {
                     console.error('Element with class', className, 'not found');
                 }
@@ -84,7 +96,7 @@ async function mainApp() {
                 let className = 'value' + rowNumber + parseInt(i + 1);
                 let element = document.querySelector(`.${className}`);
                 if (element) {
-                    element.style.backgroundColor = '#C61A09';
+                    element.style.backgroundColor = '#5B5B5B';
                 } else {
                     console.error('Element with class', className, 'not found');
                 }
@@ -156,7 +168,7 @@ async function mainApp() {
                 word += letter;
                 updateWord(letter);
             }
-            else{
+            else {
                 console.log("exsess");
                 tooManyLetters();
             }
