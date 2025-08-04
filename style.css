@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root{
+    --text-color: #5B5B5B;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -19,10 +23,9 @@ body{
 }
 .app{
     width: 100%;
+    max-width: 392px;
     height: 100%;
-    max-width: 600px;
-    background-color: #45494b;
-    border-radius: 10px;
+    max-height: 864px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,29 +35,21 @@ body{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: .4rem 1rem;
-    border-bottom: 2px solid #333;
+    padding: .3rem 1rem;
+    border-bottom: 2px solid #999;
 }
 #mode{
-    width: 100%;
     font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
     color: aliceblue;
 }
 #question,
-#analysis,
+#return,
 #settings{
     font-size: 2rem;
-    background-color: rgb(1, 54, 51);
-    color: aliceblue;
+    color: var(--text-color);
     padding: .2rem;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
 
@@ -62,11 +57,11 @@ body{
 
 /* GUESS */
 .guesses{
-    height: 100%;
-    padding: 2rem  0;
     display: flex;
     flex-direction: column;
-    row-gap: .4rem;
+    row-gap: .3rem;
+    height: fit-content;
+    padding: 1rem 0;
 }
 
 .guess{
@@ -84,26 +79,35 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    border: 3px solid aliceblue;
     color: aliceblue;
+    transition: background-color .5s ease-in-out;
 }
 .announcement{
     align-self: center;
-    color: aliceblue;
+    color: var(--text-color);
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 2rem;
-    transition: all .2s;
+    padding-top: .2rem;
+    transition: all .4s;
 }
 .submit{
     align-self: center;
     padding: 11px 27px;
     margin: 0em 0 0 0;
-    border: none;
     border-radius: 5px;
-    background-color: #00b591;
+    background-color: var(--text-color);
     color: aliceblue;
+    font-size: 1.2rem;
     font-weight: 600;
     font-family: "Quantico", sans-serif;
+    margin-bottom: 1.2rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.submit:hover{
+    border: 1px solid aliceblue;
+
 }
 
 /* KEYBOARD */
@@ -111,7 +115,7 @@ body{
     display: flex;
     flex-direction: column;
     row-gap: .2rem;
-    padding: 1rem;
+    padding: 0 .4rem;
 }
 .row{
     width: 100%;
@@ -121,20 +125,26 @@ body{
     column-gap: .2rem;
 }
 .btn{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "Quantico", sans-serif;
-    width: 9%;
-    height: 45px;
+    width: 10%;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #aaa;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: var(--text-color);
     font-weight: 600;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid var(--text-color);
+}
+.backspace:hover{
+    border: 1px solid aliceblue;
 }
 .backspace{
     font-size: 1.3rem;
